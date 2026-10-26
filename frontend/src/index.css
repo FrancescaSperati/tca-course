@@ -1,0 +1,36 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+}
+body { margin: 0; }
+main { max-width: 32rem; margin: 0 auto; padding: 2rem 1rem; }
+h1 { margin-top: 0; }
+.habits { list-style: none; padding: 0; margin: 0 0 1.5rem; display: grid; gap: 0.5rem; }
+.habits li {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.75rem 1rem; border: 1px solid #8884; border-radius: 0.75rem;
+}
+.habits li.done { background: #2ea04322; }
+.habits label { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; flex: 1; }
+.habits input[type="checkbox"] { width: 1.25rem; height: 1.25rem; }
+.emoji { font-size: 1.5rem; }
+.last { font-size: 0.8rem; opacity: 0.65; }
+.streaks { display: flex; align-items: center; gap: 0.5rem; }
+.best { font-size: 0.8rem; opacity: 0.65; white-space: nowrap; }
+.streak { transition: transform 0.15s, box-shadow 0.15s, background 0.15s; cursor: default; }
+.streak:hover {
+  transform: scale(1.15); background: #ff8c00; color: #fff; font-weight: 700;
+  box-shadow: 0 0 0.75rem #ff8c00aa;
+}
+.streak.hot {
+  background: linear-gradient(135deg, #ff9500, #ff3b30); color: #fff; font-weight: 700;
+  box-shadow: 0 0 0.6rem #ff6a0099;
+}
+.streak { padding: 0.15rem 0.6rem; border-radius: 999px; background: #ff8c0030; font-variant-numeric: tabular-nums; }
+form { display: flex; gap: 0.5rem; }
+form input { padding: 0.5rem; font: inherit; border: 1px solid #8886; border-radius: 0.5rem; }
+form input:not(.emoji-input) { flex: 1; min-width: 0; }
+.emoji-input { width: 3.5rem; text-align: center; }
+button { padding: 0.5rem 1rem; font: inherit; border-radius: 0.5rem; cursor: pointer; }
+.error { color: #d1242f; }
+.empty { opacity: 0.7; }
